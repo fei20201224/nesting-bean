@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <!-- <bean  
+      id="messageSource"
+      class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+      
+      <property name="basenames">
+        <list>
+          <value>mess</value>
+         </list>
+      </property>
+      </bean> -->
+      
+       <bean id="hunter" class="cheng.Hunter" autowire="byType"
+      lazy-init="true" >  </bean>
+      
+    
+      <!--   <bean id="hunter" class="cheng.Hunter">
+	      <property name="dog">
+	      		<bean class="cheng.Dog" c:_0="旺财" p:age="5" lazy-init="true">
+      </bean>
+	      </property>
+      </bean> -->
+      
+      <bean  id="dogx" class="cheng.Dog" c:_0="旺财" p:age="5" lazy-init="true"/>
+      
+     
+     
+</beans>
